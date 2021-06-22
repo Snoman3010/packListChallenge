@@ -1,38 +1,112 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: linear-gradient(grey, green);
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#mainList{
+  background-color: burlywood;
+  opacity: .8;
+  border-radius: 5%;
+  min-height: 0;
+  padding: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 600px) {
+  #mainList{
+    width: 90%;
+  }  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ItemList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.ListName{
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+.ListBody{
+  background-color: sienna;
+  border-radius: 3%;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.Item{
+  display: flex;
+  flex-direction: column;
+  background-color: tan;
+  border-radius: 2%;
+  margin: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+
+.ItemMain{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ItemCheckbox{
+  margin-right: 3%;
+}
+
+.ItemName{
+  font-size: 2.5vh;
+}
+
+.ItemExpansion{
+  display: flex;
+  flex-direction: column;
+}
+
+.ItemData{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ItemDescription{
+  flex-grow: 3;
+  font-style: italic;
+  font-size: 2vh;
+}
+
+.ItemRemoveButton{
+  align-self: flex-end;
+  margin-top: 1vh;
+}
+
+#NewItemForm{
+  margin: 2vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 90%;
+}
+
+#NewItemForm > *{
+  margin: .5vh;
+}
+
+#FormTitle{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
 }
